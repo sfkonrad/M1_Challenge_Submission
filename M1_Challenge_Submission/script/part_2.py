@@ -1,5 +1,5 @@
-"""Part 2: Analyze Loan Data.
-
+print("Part 2: Analyze Loan Data")
+"""
 Analyze the loan to determine the investment evaluation.
 
 Using more detailed data on one of these loans, follow these steps to calculate a Present Value, or a "fair price" for what this loan would be worth.
