@@ -2,11 +2,11 @@
 import csv
 from pathlib import Path
 
-print("Kozicki, Konrad    //    Module_1_Challenge Submission    \\\\    2020.12.27")
+print("Kozicki, Konrad    \\\\    Module_1_Challenge Submission    //    2020.12.27")
 print() # additional line spacing for aesthetic purposes
 
 
-print("//// Part 1: Automate the Calculations \\\\\\\\")
+print("\\\\\\\\     Part 1: Automate the Calculations               ////")
 """
 Automate the calculations for the loan portfolio summaries.
 
@@ -20,20 +20,20 @@ loan_costs = [500, 600, 200, 1000, 450]
 
 # How many loans are in the list?
 # @TODO: Use the `len` function to calculate the total number of loans in the list.
-print(f"Total Number of Loans:          {len(loan_costs)}")  # Prints the number of loans from the list
+print(f"    Total Number of Loans:                        {len(loan_costs)}")  # Prints the number of loans from the list
 
 # What is the total of all loans?
 # @TODO: Use the `sum` function to calculate the total of all loans in the list.
-print(f"Total of All Loans:      ${sum(loan_costs)}.00")     # Prints the total value of the loans
+print(f"    Total of All Loans:                   $ {sum(loan_costs)}.00")     # Prints the total value of the loans
 
 # What is the average loan amount from the list?
 # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
 average_loan_amount = sum(loan_costs) / len(loan_costs)
-print(f"Average Loan Amount:     $ {average_loan_amount}0")        # Prints the average loan amount
+print(f"    Average Loan Amount:                  $  {average_loan_amount}0")        # Prints the average loan amount
 
 
 print()
-print("//// Part 2: Analyze Loan Data \\\\\\\\")
+print("\\\\\\\\     Part 2: Analyze Loan Data                       ////")
 """
 Analyze the loan to determine the investment evaluation.
 
@@ -73,8 +73,8 @@ loan = {
 
 # @TODO: Use get() on the dictionary of additional information to extract the Future Value 
 # and Remaining Months on the loan.
-print(f"Future Value of this Loan:            $ {loan.get('future_value')}.00")
-print(f"Remaining Term on this Loan:                  {loan.get('remaining_months')} months")
+print(f"    Future Value of this Loan:            $ {loan.get('future_value')}.00")
+print(f"    Remaining Term on this Loan:                  {loan.get('remaining_months')} months")
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
@@ -89,9 +89,9 @@ def present_value(loan_price, remaining_months, repayment_interval, future_value
 
 present_value = present_value(loan["loan_price"], loan["remaining_months"], loan["repayment_interval"], loan["future_value"], loan["discount_rate"])
 
-print(f"Present Value of this Loan:           $  {round(present_value, 2)}")
+print(f"    Present Value of this Loan:           $  {round(present_value, 2)}")
 loan_price = loan.get('loan_price')
-print(f"Loan Cost:                            $  {loan_price}.00")
+print(f"    Loan Cost:                            $  {loan_price}.00")
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents 
@@ -102,15 +102,15 @@ print(f"Loan Cost:                            $  {loan_price}.00")
 #       the loan is too expensive and not worth the price.
 
 if present_value >= loan_price:
-    print(f">>>> This loan is worth{((present_value/loan_price)-1)*100: .3f}% MORE than the cost to purchase...  Consider Buying It! <<<<")
+    print(f"        <<<< This loan is worth{((present_value/loan_price)-1)*100: .3f}% MORE >>>>\n         <<<<  than the cost to purchase... >>>>\n             >>>>  Consider Buying It!  <<<<")
 else:
-    print(f"This loan is too expensive and not worth the price. DO NOT BUY.")
+    print(f"   This loan is too expensive and not worth the price. \n                    >> DO NOT BUY <<")
+
+#print()
+#print("Full Loan Details:", loan)
 
 print()
-print("Full Loan Details:", loan)
-
-print()
-print("//// Part 3: Perform Financial Calculations \\\\\\\\")
+print("\\\\\\\\     Part 3: Perform Financial Calculations          ////")
 """
 Perform financial calculations using functions.
 
@@ -142,7 +142,7 @@ present_value = calculate_present_value(new_loan["remaining_months"], new_loan["
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
-print(f"The Present Value of this Loan is:   ${present_value: .2f}")
+print(f"    The Present Value of this Loan is:    $ {present_value: .2f}")
 print()
 
 """Part 4: Conditionally filter lists of loans.
