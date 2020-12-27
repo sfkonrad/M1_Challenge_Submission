@@ -3,10 +3,8 @@ import csv
 from pathlib import Path
 
 print("Kozicki, Konrad    \\\\    Module_1_Challenge Submission    //    2020.12.27")
-print() # additional line spacing for aesthetic purposes
 
-
-print("\\\\\\\\     Part 1: Automate the Calculations               ////")
+print("\n\\\\\\\\     Part 1: Automate the Calculations               ////")
 """
 Automate the calculations for the loan portfolio summaries.
 
@@ -32,8 +30,7 @@ average_loan_amount = sum(loan_costs) / len(loan_costs)
 print(f"    Average Loan Amount:                  $  {average_loan_amount}0")        # Prints the average loan amount
 
 
-print()
-print("\\\\\\\\     Part 2: Analyze Loan Data                       ////")
+print("\n\\\\\\\\     Part 2: Analyze Loan Data                       ////")
 """
 Analyze the loan to determine the investment evaluation.
 
@@ -102,15 +99,15 @@ print(f"    Loan Cost:                            $  {loan_price}.00")
 #       the loan is too expensive and not worth the price.
 
 if present_value >= loan_price:
-    print(f"        <<<< This loan is worth{((present_value/loan_price)-1)*100: .3f}% MORE >>>>\n         <<<<  than the cost to purchase... >>>>\n             >>>>  Consider Buying It!  <<<<")
+    print(f"       <<<< This loan is worth{((present_value/loan_price)-1)*100: .3f}% MORE >>>>\n        <<<<  than the cost to purchase... >>>>\n            >>>>  Consider Buying It!  <<<<")
 else:
     print(f"   This loan is too expensive and not worth the price. \n                    >> DO NOT BUY <<")
 
 #print()
 #print("Full Loan Details:", loan)
 
-print()
-print("\\\\\\\\     Part 3: Perform Financial Calculations          ////")
+
+print("\n\\\\\\\     Part 3: Perform Financial Calculations          ////")
 """
 Perform financial calculations using functions.
 
@@ -147,7 +144,8 @@ print()
 
 """Part 4: Conditionally filter lists of loans.
 
-In this section, you will use a loop to iterate through a series of loans and select only the inexpensive loans.
+In this section, you will use a loop to iterate through a series of loans and select only the inexpensive 
+loans.
 
 1. Create a new, empty list called `inexpensive_loans`.
 2. Use a for loop to select each loan from a list of loans.

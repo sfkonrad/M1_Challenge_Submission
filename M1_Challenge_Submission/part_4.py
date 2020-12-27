@@ -1,7 +1,7 @@
-print()
-print("//// Part 4: Conditionally filter lists of loans \\\\\\\\)
+print("\n \\\\\\\\      Part 4: Conditionally filter lists of loans                 ////")
 """
-In this section, you will use a loop to iterate through a series of loans and select only the inexpensive loans.
+In this section, you will use a loop to iterate through a series of loans and select only the inexpensive 
+loans.
 
 1. Create a new, empty list called `inexpensive_loans`.
 2. Use a for loop to select each loan from a list of loans.
@@ -37,11 +37,18 @@ loans = [
     },
 ]
 
-# @TODO: Create an empty list called `inexpensive_loans`
-# YOUR CODE HERE!
+print(loans)
+print("\n \n")
 
-# @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
-# YOUR CODE HERE!
+# @TODO: Create an empty list called `inexpensive_loans`
+loan_price = loans("loan_price")
+inexpensive_loans = []
+
+# @TODO: Loop through all the loans and append any that cost $500 or less to the 
+# `inexpensive_loans` list
+for key in loans:
+    if loans[loan_price] <= 500:
+        inexpensive_loans.append(loans[key])
 
 # @TODO: Print the `inexpensive_loans` list
-# YOUR CODE HERE!
+print(inexpensive_loans)
