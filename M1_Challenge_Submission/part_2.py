@@ -1,5 +1,5 @@
 print()
-print("////Part 2: Analyze Loan Data\\\\\\\\")
+print("//// Part 2: Analyze Loan Data \\\\\\\\")
 """
 Analyze the loan to determine the investment evaluation.
 
@@ -53,10 +53,11 @@ def present_value(loan_price, remaining_months, repayment_interval, future_value
     present_value = future_value / (1 + discount_rate/12) ** remaining_months
     return present_value
 
-fair_value = present_value(loan["loan_price"], loan["remaining_months"], loan["repayment_interval"], loan["future_value"], loan["discount_rate"])
+present_value = present_value(loan["loan_price"], loan["remaining_months"], loan["repayment_interval"], loan["future_value"], loan["discount_rate"])
 
-print(f"Present 'Fair Value' of this Loan:    $  {round(fair_value, 2)}")
-print()
+print(f"Present Value of this Loan:           $  {round(present_value, 2)}")
+loan_price = loan.get('loan_price')
+print(f"Loan Cost:                            $  {loan_price}.00")
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents 
@@ -65,8 +66,11 @@ print()
 #       the loan is worth at least the cost to buy it.
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that 
 #       the loan is too expensive and not worth the price.
-# YOUR CODE HERE!
 
+if present_value >= loan_price:
+    print(f">>>> This loan is worth{((present_value/loan_price)-1)*100: .3f}% MORE than the cost to purchase...  Consider Buying It! <<<<")
+else:
+    print(f"This loan is too expensive and not worth the price. DO NOT BUY.")
 
-
+print()
 print("Full Loan Details:", loan)

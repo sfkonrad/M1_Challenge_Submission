@@ -2,11 +2,11 @@
 import csv
 from pathlib import Path
 
-print("Kozicki, Konrad    //    Module_1_Challenge Submission    //    2020.12.27")
+print("Kozicki, Konrad    //    Module_1_Challenge Submission    \\\\    2020.12.27")
 print() # additional line spacing for aesthetic purposes
 
 
-print("////Part 1: Automate the Calculations\\\\\\\\")
+print("//// Part 1: Automate the Calculations \\\\\\\\")
 """
 Automate the calculations for the loan portfolio summaries.
 
