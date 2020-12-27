@@ -68,7 +68,7 @@ print(f"Loan Cost:                            $  {loan_price}.00")
 #       the loan is too expensive and not worth the price.
 
 if present_value >= loan_price:
-    print(f">>>> This loan is worth{((present_value/loan_price)-1)*100: .3f}% MORE than the cost to purchase...  Consider Buying It! <<<<")
+    print(f">>>> This loan is worth{((present_value/loan_price)-1)*100: .3f} % MORE than the cost to purchase...  Consider Buying It! <<<<")
 else:
     print(f"This loan is too expensive and not worth the price. DO NOT BUY.")
 
