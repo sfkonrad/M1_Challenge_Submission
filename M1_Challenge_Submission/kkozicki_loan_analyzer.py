@@ -71,7 +71,7 @@ loan = {
 # @TODO: Use get() on the dictionary of additional information to extract the Future Value 
 # and Remaining Months on the loan.
 print(f"    Future Value of this Loan:            $ {loan.get('future_value')}.00")
-print(f"    Remaining Term on this Loan:                  {loan.get('remaining_months')} months")
+print(f"    Remaining Term on this Loan:           {loan.get('remaining_months')} months")
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
@@ -223,10 +223,10 @@ with open(output_path, "w") as csvfile:
     # as a row in the CSV file.
     for item in inexpensive_loans_list:
         csvwriter.writerow(item.values())
-print("         Data has been written from new list to CSV file.")
+print("\n          <>  Success! Data has been written from  <>\n          <> new list(s) to the specified CSV file <>")
 
 
 
 
 
-print("\n\n\n         {end of the loan_analyzer.py program}\n")
+print("\n\n            {end of the loan_analyzer.py program}\n")
