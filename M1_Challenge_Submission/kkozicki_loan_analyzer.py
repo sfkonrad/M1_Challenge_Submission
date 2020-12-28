@@ -139,9 +139,9 @@ present_value = calculate_present_value(new_loan["remaining_months"], new_loan["
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
-print(f"    The Present Value of this Loan is:    $ {present_value: .2f}\n ")
+print(f"    The Present Value of this Loan is:    $ {present_value: .2f} ")
 
-print("\n \\\\\\\\      Part 4: Conditionally filter lists of loans      ////")
+print("\n\\\\\\\\     Part 4: Conditionally filter lists of loans        ////")
 """
 In this section, you will use a loop to iterate through a series of loans and select only the inexpensive 
 loans.
@@ -189,7 +189,7 @@ for loan_price in loans:
 
 print("   ", inexpensive_loans_list)
 
-print("\n \\\\\\\\      Part 5: Save the results                         ////")
+print("\n\\\\\\\\     Part 5: Save the results                           ////")
 """
 Output this list of inexpensive loans to a csv file
     1. Use `with open` to open a new CSV file.
@@ -202,7 +202,6 @@ Output this list of inexpensive loans to a csv file
     https://docs.python.org/3/library/csv.html#writer-objects
 
 """
-
 # Set the output header
 header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
 
@@ -211,4 +210,23 @@ output_path = Path("inexpensive_loans.csv")
 
 # @TODO: Use the csv library and `csv.writer` to write the header row
 # and each row of `loan.values()` from the `inexpensive_loans` list.
-# YOUR CODE HERE!
+print("     Writing the data to a CSV file...")
+# Open the output CSV file path using `with open`
+with open(output_path, "w") as csvfile:
+    # Create a csvwriter
+    csvwriter = csv.writer(csvfile, delimiter=",")
+
+    # Write the header to the CSV file
+    csvwriter.writerow(header)
+
+    # Write the values of each dictionary inside of `inexpensive_loans_list`
+    # as a row in the CSV file.
+    for item in inexpensive_loans_list:
+        csvwriter.writerow(item.values())
+print("         Data has been written from new list to CSV file.")
+
+
+
+
+
+print("\n\n\n         {end of the loan_analyzer.py program}\n")
