@@ -4,7 +4,7 @@ from pathlib import Path
 
 print("Kozicki, Konrad    \\\\    Module_1_Challenge Submission    //    2020.12.27")
 
-print("\n\\\\\\\\     Part 1: Automate the Calculations               ////")
+print("\n\\\\\\\\     Part 1: Automate the Calculations                  ////")
 """
 Automate the calculations for the loan portfolio summaries.
 
@@ -30,7 +30,7 @@ average_loan_amount = sum(loan_costs) / len(loan_costs)
 print(f"    Average Loan Amount:                  $  {average_loan_amount}0")        # Prints the average loan amount
 
 
-print("\n\\\\\\\\     Part 2: Analyze Loan Data                       ////")
+print("\n\\\\\\\\     Part 2: Analyze Loan Data                          ////")
 """
 Analyze the loan to determine the investment evaluation.
 
@@ -107,7 +107,7 @@ else:
 #print("Full Loan Details:", loan)
 
 
-print("\n\\\\\\\     Part 3: Perform Financial Calculations          ////")
+print("\n\\\\\\\     Part 3: Perform Financial Calculations             ////")
 """
 Perform financial calculations using functions.
 
@@ -141,7 +141,7 @@ present_value = calculate_present_value(new_loan["remaining_months"], new_loan["
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 print(f"    The Present Value of this Loan is:    $ {present_value: .2f}\n ")
 
-print("\n \\\\\\\\      Part 4: Conditionally filter lists of loans                 ////")
+print("\n \\\\\\\\      Part 4: Conditionally filter lists of loans      ////")
 """
 In this section, you will use a loop to iterate through a series of loans and select only the inexpensive 
 loans.
@@ -183,30 +183,14 @@ loans = [
 
 inexpensive_loans_list = []     # @TODO: Create an empty list called `inexpensive_loans`
 
-
-def filter_max_loan_size(loan_price, loans):
-    """Filters the loan list by the maximum allowed loan amount.
-
-    Args:
-        loan_price (int): The current price to purchase the loan.
-        loans (list of lists): The available loans to purchase.
-
-    Returns:
-        A list of qualifying bank loans.
-    """
-
-    inexpensive_loans_list = []
-
-    for loan_price in loans:
-        if loan_price <= 500:
+for loan_price in loans:
+    if loan_price["loan_price"] < 500:
             inexpensive_loans_list.append(loan_price)
-    return(inexpensive_loans_list)
 
-print(inexpensive_loans_list)
+print("   ", inexpensive_loans_list)
 
-
-"""Part 5: Save the results.
-
+print("\n \\\\\\\\      Part 5: Save the results                         ////")
+"""
 Output this list of inexpensive loans to a csv file
     1. Use `with open` to open a new CSV file.
         a. Create a `csvwriter` using the `csv` library.

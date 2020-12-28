@@ -40,23 +40,8 @@ loans = [
 
 inexpensive_loans_list = []     # @TODO: Create an empty list called `inexpensive_loans`
 
-
-def filter_max_loan_size(loan_price, loans):
-    """Filters the loan list by the maximum allowed loan amount.
-
-    Args:
-        loan_price (int): The current price to purchase the loan.
-        loans (list of lists): The available loans to purchase.
-
-    Returns:
-        A list of qualifying bank loans.
-    """
-
-    inexpensive_loans_list = []
-
-    for loan_price in loans:
-        if loan_price <= 500:
+for loan_price in loans:
+    if loan_price["loan_price"] < 500:
             inexpensive_loans_list.append(loan_price)
-    return(inexpensive_loans_list)
 
 print(inexpensive_loans_list)
