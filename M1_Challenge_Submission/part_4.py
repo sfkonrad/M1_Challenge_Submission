@@ -5,7 +5,8 @@ loans.
 
 1. Create a new, empty list called `inexpensive_loans`.
 2. Use a for loop to select each loan from a list of loans.
-    a. Inside the for loop, write an if-statement to determine if the loan_price is less than 500
+    a. Inside the for loop, write an if-statement to determine if the loan_price is less 
+    than 500
     b. If the loan_price is less than 500 then append that loan to the `inexpensive_loans` list.
 3. Print the list of inexpensive_loans.
 """
@@ -37,18 +38,25 @@ loans = [
     },
 ]
 
-print(loans)
-print("\n \n")
+inexpensive_loans_list = []     # @TODO: Create an empty list called `inexpensive_loans`
 
-# @TODO: Create an empty list called `inexpensive_loans`
-loan_price = loans("loan_price")
-inexpensive_loans = []
 
-# @TODO: Loop through all the loans and append any that cost $500 or less to the 
-# `inexpensive_loans` list
-for key in loans:
-    if loans[loan_price] <= 500:
-        inexpensive_loans.append(loans[key])
+def filter_max_loan_size(loan_price, loans):
+    """Filters the loan list by the maximum allowed loan amount.
 
-# @TODO: Print the `inexpensive_loans` list
-print(inexpensive_loans)
+    Args:
+        loan_price (int): The current price to purchase the loan.
+        loans (list of lists): The available loans to purchase.
+
+    Returns:
+        A list of qualifying bank loans.
+    """
+
+    inexpensive_loans_list = []
+
+    for loan_price in loans:
+        if loan_price <= 500:
+            inexpensive_loans_list.append(loan_price)
+    return(inexpensive_loans_list)
+
+print(inexpensive_loans_list)

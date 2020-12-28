@@ -126,7 +126,7 @@ new_loan = {
     "future_value": 1000,
 }
 
-new_loan["annual_discount_rate"] = 0.2        # Add a key called 'annual_discount_rate' and assign it a value of 20 percent (or 0.2)
+annual_discount_rate = new_loan["annual_discount_rate"] = 0.2        # Add a key called 'annual_discount_rate' and assign it a value of 20 percent (or 0.2)
 
 # @TODO: Define a new function that will be used to calculate present value.
 #    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
@@ -139,17 +139,17 @@ present_value = calculate_present_value(new_loan["remaining_months"], new_loan["
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
-print(f"    The Present Value of this Loan is:    $ {present_value: .2f}")
-print()
+print(f"    The Present Value of this Loan is:    $ {present_value: .2f}\n ")
 
-"""Part 4: Conditionally filter lists of loans.
-
+print("\n \\\\\\\\      Part 4: Conditionally filter lists of loans                 ////")
+"""
 In this section, you will use a loop to iterate through a series of loans and select only the inexpensive 
 loans.
 
 1. Create a new, empty list called `inexpensive_loans`.
 2. Use a for loop to select each loan from a list of loans.
-    a. Inside the for loop, write an if-statement to determine if the loan_price is less than 500
+    a. Inside the for loop, write an if-statement to determine if the loan_price is less 
+    than 500
     b. If the loan_price is less than 500 then append that loan to the `inexpensive_loans` list.
 3. Print the list of inexpensive_loans.
 """
@@ -181,14 +181,28 @@ loans = [
     },
 ]
 
-# @TODO: Create an empty list called `inexpensive_loans`
-# YOUR CODE HERE!
+inexpensive_loans_list = []     # @TODO: Create an empty list called `inexpensive_loans`
 
-# @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
-# YOUR CODE HERE!
 
-# @TODO: Print the `inexpensive_loans` list
-# YOUR CODE HERE!
+def filter_max_loan_size(loan_price, loans):
+    """Filters the loan list by the maximum allowed loan amount.
+
+    Args:
+        loan_price (int): The current price to purchase the loan.
+        loans (list of lists): The available loans to purchase.
+
+    Returns:
+        A list of qualifying bank loans.
+    """
+
+    inexpensive_loans_list = []
+
+    for loan_price in loans:
+        if loan_price <= 500:
+            inexpensive_loans_list.append(loan_price)
+    return(inexpensive_loans_list)
+
+print(inexpensive_loans_list)
 
 
 """Part 5: Save the results.
