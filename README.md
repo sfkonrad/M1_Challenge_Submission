@@ -6,7 +6,7 @@ Welcome to our first Course Challenge. Each module concludes with a graded Chall
 ### **Background**
 We're working for a lending startup engaged in microcredit loans. The company needs help valuing these loans. In this Project, we've automated a process that does just that.
 
-### **What We've Creating**
+### **What We've Created**
 We created a simple Python program that automates the tasks associated with valuing microlending loans. Specifically, we've done the following:
 
 1. Create a GitHub Repository
