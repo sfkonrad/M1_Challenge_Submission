@@ -8,17 +8,17 @@ Welcome to our first Course Challenge. Each module concludes with a graded Chall
 
 ### **What We've Created**
 > We created a simple Python program that automates the tasks associated with valuing microlending loans. Specifically, we've done the following:
-
+> 
 > 1. Create a GitHub Repository
-
+> 
 > 2. Automate the Calculations
-
-3. Analyze Loan Data
-
-4. Perform Financial Calculations
-
-5. Conditionally Filter Lists of Loans
-
-6. Save the Results
+> 
+> 3. Analyze Loan Data
+> 
+> 4. Perform Financial Calculations
+> 
+> 5. Conditionally Filter Lists of Loans
+>
+>6. Save the Results
 
 We then ratified the poject by proceeding to upload the final code to GitHub.
